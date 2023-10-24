@@ -1,7 +1,13 @@
+import { TodoForm, TodoItem } from './components';
+
 const App = () => {
   return (
     <>
-      <h1 className="p-4 text-center bg-orange-500 text-white text-3xl">Radhe Radhe</h1>
+      <div className="p-4 w-1/2 flex flex-col items-center justify-center bg-slate-600">
+        <TodoForm />
+        <TodoItem />
+        <TodoItem />
+      </div>
     </>
   );
 };

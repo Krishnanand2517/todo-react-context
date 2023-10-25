@@ -33,14 +33,23 @@ const App = () => {
 
   useEffect(() => {
     localStorage.setItem("todoList", JSON.stringify(todos));
+    console.log(todos);
   }, [todos]);
 
   return (
     <TodoContextProvider value={{ todos, addTodo, removeTodo, updateTodo, toggleComplete }}>
-      <div className="p-4 w-1/2 flex flex-col items-center justify-center bg-slate-600">
-        <TodoForm />
-        <TodoItem />
-        <TodoItem />
+      <div className="bg-slate-700 min-h-screen py-8">
+        <div className="w-full max-w-2xl mx-auto px-4 py-3 text-white">
+          <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Tasks</h1>
+          <div className="mb-4">
+            <TodoForm />
+          </div>
+          <div className="flex flex-wrap gap-y-3">
+            <TodoItem />
+            <TodoItem />
+          </div>
+
+        </div>
       </div>
     </TodoContextProvider>
   );

@@ -33,7 +33,6 @@ const App = () => {
 
   useEffect(() => {
     localStorage.setItem("todoList", JSON.stringify(todos));
-    console.log(todos);
   }, [todos]);
 
   return (
@@ -45,8 +44,11 @@ const App = () => {
             <TodoForm />
           </div>
           <div className="flex flex-wrap gap-y-3">
-            <TodoItem />
-            <TodoItem />
+            {todos.map((todo) => (
+              <div className="w-full" key={todo.id}>
+                <TodoItem todo={todo} />
+              </div>
+            ))}
           </div>
 
         </div>

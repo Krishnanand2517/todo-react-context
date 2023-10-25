@@ -14,6 +14,7 @@ const TodoForm = () => {
             todoMsg,
             isComplete: false
         });
+        setTodoMsg("");
     };
 
     return (

@@ -41,11 +41,11 @@ Before getting started, make sure you have Node.js and npm (Node Package Manager
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/Krishnanand2517/todo-react.git
+    git clone https://github.com/Krishnanand2517/todo-react-context.git
     ```
 1. Navigate to the project directory:
     ```bash
-    cd todo-react
+    cd todo-react-context
     ```
 
 1. Install the project dependencies:
